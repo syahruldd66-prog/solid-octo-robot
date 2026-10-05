@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b10">
+  <title>REELSTORM — Reels Cover Finder</title>
+  <meta name="description" content="Temukan inspirasi sampul Instagram Reels dari Pinterest berdasarkan kategori pilihanmu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="REELSTORM home">
+      <span class="brand-mark">R</span><span>REEL<span class="brand-accent">STORM</span></span>
+    </a>
+    <span class="top-pill"><span class="live-dot"></span> PINTEREST COVER FINDER</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT REELS COVER STARTS HERE</div>
+      <h1>Temukan sampul yang<br><span class="gradient-text">bikin orang berhenti scroll.</span></h1>
+      <p class="hero-copy">Pilih vibe, tentukan jumlah, lalu jelajahi referensi sampul dari Pinterest. Simpel, cepat, dan sesuai gaya kontenmu.</p>
+    </section>
+
+    <section class="finder panel" aria-labelledby="finder-title">
+      <div class="section-heading">
+        <div>
+          <span class="step-label">01 / PILIH KATEGORI</span>
+          <h2 id="finder-title">Vibe sampul lu apa?</h2>
+        </div>
+        <span class="selection-count"><span id="selectedCount">1</span> kategori dipilih</span>
+      </div>
+
+      <div class="category-grid" id="categoryGrid">
+        <button class="category-card selected" type="button" data-category="parfum" aria-pressed="true">
+          <span class="category-number">01</span><span class="category-icon">✦</span>
+          <span class="category-name">Tokoh parfum</span>
+          <span class="category-desc">Luxury · clean · cinematic</span><span class="select-indicator">✓</span>
+        </button>
+        <button class="category-card" type="button" data-category="motor" aria-pressed="false">
+          <span class="category-number">02</span><span class="category-icon">↗</span>
+          <span class="category-name">Motor</span>
+          <span class="category-desc">Street · night ride · sporty</span><span class="select-indicator">✓</span>
+        </button>
+        <button class="category-card" type="button" data-category="cafe" aria-pressed="false">
+          <span class="category-number">03</span><span class="category-icon">☕</span>
+          <span class="category-name">Cafe malam</span>
+          <span class="category-desc">Makanan · minuman · warm lights</span><span class="select-indicator">✓</span>
+        </button>
+        <button class="category-card" type="button" data-category="pantai" aria-pressed="false">
+          <span class="category-number">04</span><span class="category-icon">〰</span>
+          <span class="category-name">Akhol di pantai</span>
+          <span class="category-desc">Beach · sunset · chill mood</span><span class="select-indicator">✓</span>
+        </button>
+      </div>
+
+      <div class="controls-row">
+        <label class="quantity-control">
+          <span class="step-label">02 / JUMLAH REFERENSI</span>
+          <span class="quantity-input-wrap">
+            <button type="button" id="minusBtn" class="stepper" aria-label="Kurangi jumlah">−</button>
+            <input type="number" id="quantity" min="1" max="20" value="5" inputmode="numeric" aria-label="Jumlah sampul">
+            <button type="button" id="plusBtn" class="stepper" aria-label="Tambah jumlah">+</button>
+          </span>
+          <small>Pilih 1–20 referensi untuk dijelajahi</small>
+        </label>
+        <button class="search-button" type="button" id="searchBtn">
+          <span class="search-button-icon">↗</span><span><strong>Cari di Pinterest</strong><small>Buka hasil pencarian sesuai pilihan</small></span>
+        </button>
+      </div>
+      <p class="notice"><span>ⓘ</span> Hasil foto ditampilkan di Pinterest. Website ini tidak mengambil atau mengunduh gambar secara otomatis.</p>
+    </section>
+
+    <section class="results-section" id="resultsSection">
+      <div class="section-heading results-heading">
+        <div><span class="step-label">03 / SIAP DIJELAJAHI</span><h2>Mulai dari sini</h2></div>
+        <span class="results-badge">Pinterest search</span>
+      </div>
+      <div class="result-preview panel">
+        <div class="preview-art"><div class="preview-orbit orbit-a"></div><div class="preview-orbit orbit-b"></div><div class="preview-core">R<span>✦</span></div><div class="preview-tag">COVER<br>INSPIRATION</div></div>
+        <div class="preview-content">
+          <span class="preview-kicker">PILIHAN LU, REFERENSI LU</span>
+          <h3 id="previewTitle">Tokoh parfum</h3>
+          <p id="previewDescription">Jelajahi ide fotografi parfum yang mewah, clean, dan cinematic di Pinterest.</p>
+          <div class="preview-meta"><span class="pin-icon">P</span><span id="previewQuery">luxury perfume aesthetic photography</span></div>
+          <button type="button" class="text-link" id="previewSearch">Lihat referensi di Pinterest <span>↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section">
+      <span class="step-label">CARA PAKAI</span>
+      <div class="how-grid">
+        <div><span class="how-num">01</span><h3>Pilih kategori</h3><p>Pilih satu dari empat tema sampul yang tersedia.</p></div>
+        <div><span class="how-num">02</span><h3>Atur jumlah</h3><p>Tentukan berapa banyak referensi yang ingin lu cari.</p></div>
+        <div><span class="how-num">03</span><h3>Pilih di Pinterest</h3><p>Buka hasil pencarian, lalu pilih Pin yang paling cocok.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">R</span><span>REEL<span class="brand-accent">STORM</span></span></a><span>Made for creators · Pinterest is the source of inspiration</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
